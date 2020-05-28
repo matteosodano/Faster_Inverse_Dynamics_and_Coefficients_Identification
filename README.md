@@ -7,8 +7,8 @@ In the whole work, we referred to the KUKA LWR IV+ 7R robot manipulator. Simulat
 
 
 ## Implementation Details
-The code has been written in MATLAB 
-
+The code has been written in MATLAB R2018b. V-REP PRO EDU (now *CoppeliaSim*) has been used to check the trajectories designed for the identification part. 
+ 
 ## References
 Jubien A., Gautier M., Janot A., (2014), *Dynamic Identification of the Kuka LightWeight Robot: comparison between actual and confidential Kuka's parameters*, IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), France, pp. 483-488.
 
