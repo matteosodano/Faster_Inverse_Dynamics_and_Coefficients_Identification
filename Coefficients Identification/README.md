@@ -12,3 +12,7 @@ It may happen that some parameters do not appear in the model, or they appear on
 <p align="center"> <img src="https://user-images.githubusercontent.com/62264708/83349832-ffe5cb00-a337-11ea-8910-92e48a0fbaa8.png"> </p>
 
 where <img src="https://user-images.githubusercontent.com/62264708/83349823-feb49e00-a337-11ea-99f8-350e397635a1.png">, is called Regression Matrix.
+
+Finally, the Identification Problem can be formalized. The robot is commanded to perform some particularly exciting trajectories. In this way, the input torque and the joint trajectories are known, while the joint velocities and accelerations can be reconstructed via numeric differentiation and filtering. Then:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/62264708/83349832-ffe5cb00-a337-11ea-8910-92e48a0fbaa8.png"> </p>
