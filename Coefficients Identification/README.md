@@ -31,6 +31,6 @@ After the identification, we also went through a validation phase. We designed n
 - torques obtained from the robot itself;
 - torques obtained using the coefficients retrieved from the identification phase.
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/62264708/83350154-6c61c980-a33a-11ea-81fa-cf130ad50e6d.png"> </p>
+<p align="center"> <img width = 1000 src="https://user-images.githubusercontent.com/62264708/83350554-1fcbbd80-a33d-11ea-8340-926f4ba10c5f.png"> </p>
 
 The estimation of the torques gives good results: the discontinuities are caused by a poor estimation of the damping terms (indeed, they are present when the joint velocity changes sign). It can be easily observed how the dynamic coefficients related to the sixth and seventh link are approximately estimated since the validation gives unsatisfactory results.
