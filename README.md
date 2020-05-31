@@ -1,4 +1,4 @@
-## Introduction
+## Faster Inverse Dynamics and Coefficients Identification
 Developed by: M. Sodano, F. Roscia, A. Wrona (2020).
 
 Supervisor: prof. A. De Luca.
