@@ -13,6 +13,10 @@ It may happen that some parameters do not appear in the model, or they appear on
 
 where <img src="https://user-images.githubusercontent.com/62264708/83349823-feb49e00-a337-11ea-99f8-350e397635a1.png">, is called Regression Matrix.
 
-Finally, the Identification Problem can be formalized. The robot is commanded to perform some particularly exciting trajectories. In this way, the input torque and the joint trajectories are known, while the joint velocities and accelerations can be reconstructed via numeric differentiation and filtering. Then:
+Finally, the Identification Problem can be formalized. The robot is commanded to perform some persistently exciting trajectories. In this way, the input torque and the joint trajectories are known, while the joint velocities and accelerations can be reconstructed via numeric differentiation and filtering. Then:
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/62264708/83349832-ffe5cb00-a337-11ea-8910-92e48a0fbaa8.png"> </p>
+<p align="center"> <img src="https://user-images.githubusercontent.com/62264708/83350156-71267d80-a33a-11ea-9401-49bf585c04cd.png"> </p>
+ 
+where the regression matrix has been pseudo-inverted. In order to obtain "good" persistently exciting trajectories, it is needed that the ratio between the maximum and the minimum singular value of the regression matrix is small (e.g., between 50 and 70), i.e.
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/62264708/83350154-6c61c980-a33a-11ea-81fa-cf130ad50e6d.png"> </p>
