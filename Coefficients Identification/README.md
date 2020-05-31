@@ -27,9 +27,9 @@ Two kinds of trajectories have been used:
 
 Every trajectory has been designed in MATLAB R2018b, validated in V-REP for collision checking and executed on the real KUKA LWR IV+ robot manipulator in the Robotics Laboratory at the DIAG Laboratory of University La Sapienza, Rome.
 
-After the identification, we also went through a validation phase. We designed new trajectories and compared two results:
-- torques obtained from the robot itself;
-- torques obtained using the coefficients retrieved from the identification phase.
+After the identification, we also went through a validation phase. We designed new trajectories and compared two results (see Figure below):
+- torques obtained from the robot itself (in blue);
+- torques obtained using the coefficients retrieved from the identification phase (in red).
 
 <p align="center"> <img width = 1000 src="https://user-images.githubusercontent.com/62264708/83350554-1fcbbd80-a33d-11ea-8340-926f4ba10c5f.png"> </p>
 
