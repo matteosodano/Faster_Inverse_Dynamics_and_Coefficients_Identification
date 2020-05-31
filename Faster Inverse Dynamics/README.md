@@ -15,3 +15,7 @@ Another thing to do when working with different frames is to express all the dyn
 <p align="center"> <img src="https://user-images.githubusercontent.com/62264708/83349148-ceb6cc00-a332-11ea-9dfe-48124cbbaabf.png"> </p>
 
 It has been validated that the Newton-Euler algorithm using the modified DH is faster than the one using the classical DH. The main reason lays in the final loop of the algorithm, where the algorithm with the modified DH performs one operation less than the one with the classical DH. This can be seen in `modDH_NE.m` with `modDH_finalloop.m` and `orDH_NE.m` with `orDH_finalloop.m` (the `xxx_finalloop.m` function isolates the aforementioned loop, in order to put in light the difference).
+
+
+## Implementation Details
+The code is implemented in MATLAB R2018b. In the `xxx_main.m` script, data from the robot are loaded (if you wish to use a different robot, modify the corresponding scripts). Furthermore, trajectories are read from a table: the script expects a table with 8 columns (the first one with the time instants, the others related to the seven joints of the manipulator). 
