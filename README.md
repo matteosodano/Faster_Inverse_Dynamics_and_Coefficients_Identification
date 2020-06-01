@@ -3,8 +3,8 @@ Developed by: M. Sodano, F. Roscia, A. Wrona (2020).
 
 Supervisor: prof. A. De Luca.
 
-Achievement: Robotics II exam.
-
+Achievement: Robotics II exam.\
+<br>
 
 In this work, the dynamic model of a robot manipulator has been investigated. Two problems have been addressed: 
 - *Faster Inverse Dynamics*: consists in comparing the effects of classical and modified Denavit-Hartenberg conventions using Newton-Euler algorithm. In particular, we focused on the required computational time.
