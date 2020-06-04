@@ -1,0 +1,3 @@
+global clientID
+
+vrep.simxStopSimulation(clientID,vrep.simx_opmode_oneshot_wait);
