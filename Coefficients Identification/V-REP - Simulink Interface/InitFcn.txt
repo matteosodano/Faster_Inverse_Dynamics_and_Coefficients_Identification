@@ -1,0 +1,91 @@
+clear all
+
+clc
+
+
+
+global clientID
+
+global vrep
+
+global vecJoints nJoints
+
+
+
+load_path
+
+
+
+
+
+addpath('C:\Program Files\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\lib\lib\Windows\64Bit')
+
+
+
+
+
+disp('Program started');
+
+vrep=remApi('remoteApi'); % using the prototype file (remoteApiProto.m)
+
+vrep.simxFinish(-1); % just in case, close all opened connections
+
+clientID=vrep.simxStart('127.0.0.1',19997,true,true,5000,5);
+
+
+
+vrep.simxStartSimulation(clientID,vrep.simx_opmode_oneshot_wait);
+
+vrep.simxSynchronous(clientID,true)
+
+
+
+if (clientID<=-1)
+
+    disp('stop simulation')
+
+    vrep.delete();
+
+    set_param(gcs, 'SimulationCommand', 'stop')
+
+end
+
+
+
+% Root of the joint in Vrep
+
+rootJoints     = 'UR10_joint';
+
+
+
+% Number of joints
+
+nJoints        = 6;
+
+
+
+% Handles of the joints
+
+vecJoints      = zeros(nJoints,1);
+
+
+
+for i=1:nJoints
+
+                [res,obj]=vrep.simxGetObjectHandle(clientID,strcat(rootJoints,int2str(i)),vrep.simx_opmode_oneshot_wait);
+
+                if res==vrep.simx_return_ok
+
+                    vecJoints(i) = obj;
+
+                   [res,pos] = vrep.simxGetJointPosition(clientID,vecJoints(i),vrep.simx_opmode_streaming);
+
+                else
+
+                    vecJoints(i) = -1;
+
+                    disp(strcat('joint nr ', int2str(i), ' named ', rootJoints, int2str(i) , ' not avalaible!'));
+
+                end
+
+end
